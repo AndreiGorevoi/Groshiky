@@ -40,26 +40,26 @@
 </head>
 
 <body class="text-center">
-<form class="form-signin">
-<form:form method="get" action="registration" >
+
+<form:form method="post" action="registration" modelAttribute="user" class="form-signin">
 
     <%--@declare id="inputlogin"--%>
     <%--@declare id="inputusername"--%><link href="styles/css/signin.css" rel="stylesheet">
     <img class="mb-4" src="styles/brand/bootstrap-solid.svg" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Registration form</h1>
-    <label for="inputLogin" class="sr-only">Input Login</label>
-    <input type="login" id="inputLogin" class="form-control" placeholder="login" required autofocus>
-    <label for="inputPassword" class="sr-only">Input Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="password" required>
-    <label for="inputUsername" class="sr-only">Input Username</label>
-    <input type="username" id="inputUsername" class="form-control" placeholder="username" required>
+    <td><form:label path="login" class="sr-only">Login</form:label></td>
+    <td><form:input path="login" class="form-control" placeholder="input login" /></td>
+    <td><form:label path="password" class="sr-only">Login</form:label></td>
+    <td><form:input path="password" class="form-control" placeholder="input password" /></td>
+    <td><form:label path="username" class="sr-only">Login</form:label></td>
+    <td><form:input path="username" class="form-control" placeholder="input username" /></td>
     <div class="checkbox mb-3">
 
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Registration</button>
     <p class="mt-5 mb-3 text-muted"></p>
 </form:form>
-</form>
+
 </body>
 
 
