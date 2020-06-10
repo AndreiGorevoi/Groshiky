@@ -51,8 +51,8 @@ public class HibernateConfig {
 
     private Properties hibernateProperties() {
         Properties hibernateproperties = new Properties();
-        hibernateproperties.setProperty("hibernate.hbm2ddl.auto", "none");
-        hibernateproperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        hibernateproperties.setProperty("hibernate.hbm2ddl.auto", "update");
+        hibernateproperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL8Dialect");
         return hibernateproperties;
 
     }
