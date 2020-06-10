@@ -1,5 +1,9 @@
 package com.zontik.groshiky.controllers;
 
+import com.zontik.groshiky.model.User;
+import com.zontik.groshiky.service.IUserService;
+import com.zontik.groshiky.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -11,15 +15,26 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
 
+    @Autowired
+    private IUserService userService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(ModelMap model) {
-        model.addAttribute("message", "Hello there! Do you want to do?");
         return "index";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public String registration(ModelMap model) {
+    public String registration(Model model) {
+        User user = new User();
+        model.addAttribute("user", user);
         return "registration";
     }
+
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public String addStudent(@ModelAttribute("user") User user) {
+        userService.createUser(user);
+        return "dashboard";
+    }
+
+
 }
