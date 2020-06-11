@@ -44,20 +44,20 @@
 <form:form method="post" action="registration" modelAttribute="user" class="form-signin">
     <div class="text-center mb-4">
         <img class="mb-4" src="styles/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Register</h1>
     </div>
     <div class="form-label-group">
-        <form:input path="username" id="username" class="form-control" placeholder="User name" required=""
+        <form:input path="username" id="username" class="form-control" placeholder="User name" required="required"
                     autofocus=""/>
         <label for="username">User name</label>
     </div>
     <div class="form-label-group">
-        <form:input path="login" id="login" class="form-control" placeholder="Login name" required=""
+        <form:input path="login" id="login" class="form-control" placeholder="Login name" required="required"
                     autofocus=""/>
         <label for="login">Login name</label>
     </div>
     <div class="form-label-group">
-        <form:input path="password" id="password" class="form-control" placeholder="Password" required=""
+        <form:input path="password" id="password" class="form-control" placeholder="Password" required="required"
                     autofocus=""/>
         <label for="password">Password</label>
     </div>
