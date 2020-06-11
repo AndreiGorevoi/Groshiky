@@ -30,7 +30,7 @@ public class IndexController {
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public String addStudent(@ModelAttribute("user") User user) {
+    public String addUser(@ModelAttribute("user") User user) {
         userService.createUser(user);
         return "dashboard";
     }
