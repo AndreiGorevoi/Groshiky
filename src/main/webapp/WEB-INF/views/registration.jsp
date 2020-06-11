@@ -37,30 +37,33 @@
             }
         }
     </style>
+    <link href="styles/css/floating-labels.css" type="text/css" rel="stylesheet">
 </head>
 
-<body class="text-center">
-<form class="form-signin">
-<form:form method="get" action="registration" >
-
-    <%--@declare id="inputlogin"--%>
-    <%--@declare id="inputusername"--%><link href="styles/css/signin.css" rel="stylesheet">
-    <img class="mb-4" src="styles/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Registration form</h1>
-    <label for="inputLogin" class="sr-only">Input Login</label>
-    <input type="login" id="inputLogin" class="form-control" placeholder="login" required autofocus>
-    <label for="inputPassword" class="sr-only">Input Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="password" required>
-    <label for="inputUsername" class="sr-only">Input Username</label>
-    <input type="username" id="inputUsername" class="form-control" placeholder="username" required>
-    <div class="checkbox mb-3">
-
+<body>
+<form:form method="post" action="registration" modelAttribute="user" class="form-signin">
+    <div class="text-center mb-4">
+        <img class="mb-4" src="styles/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Register</h1>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Registration</button>
+    <div class="form-label-group">
+        <form:input path="username" id="username" class="form-control" placeholder="User name" required="required"
+                    autofocus=""/>
+        <label for="username">User name</label>
+    </div>
+    <div class="form-label-group">
+        <form:input path="login" id="login" class="form-control" placeholder="Login name" required="required"
+                    autofocus=""/>
+        <label for="login">Login name</label>
+    </div>
+    <div class="form-label-group">
+        <form:input path="password" type="password" id="password" class="form-control" placeholder="Password" required="required"
+                    autofocus=""/>
+        <label for="password">Password</label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     <p class="mt-5 mb-3 text-muted"></p>
 </form:form>
-</form>
 </body>
-
-
 </html>
