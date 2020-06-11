@@ -57,12 +57,12 @@
         <label for="login">Login name</label>
     </div>
     <div class="form-label-group">
-        <form:input path="password" id="password" class="form-control" placeholder="Password" required="required"
+        <form:input path="password" type="password" id="password" class="form-control" placeholder="Password" required="required"
                     autofocus=""/>
         <label for="password">Password</label>
     </div>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Registration</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     <p class="mt-5 mb-3 text-muted"></p>
 </form:form>
 </body>
