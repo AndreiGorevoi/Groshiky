@@ -9,8 +9,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService implements IUserService{
 
+    private final IUserDao userDao;
+
     @Autowired
-    private IUserDao userDao;
+    public UserService(IUserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public void createUser(User user) {
